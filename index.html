@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clockwerk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color: hsla(211, 36%, 84%, 1.0);
+            --background-color: hsla(212, 29%, 19%, 1.0);
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--color);
+            text-align: center;
+            height: 100%;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Rowdies', cursive;
+        }
+
+        .pendulum {
+            margin: auto;
+            width: 10rem;
+            transform-origin: 5rem 0;
+            animation: pendulum-action 2s infinite ease-in-out;
+        }
+
+        .line {
+            margin: auto;
+            height: 20rem;
+            width: 0.3rem;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            background-color: var(--color);
+        }
+
+        .weight {
+            height: 10rem;
+            width: 10rem;
+            border-radius: 10rem;
+            outline: 2rem solid var(--color);
+            outline-offset: -2rem;
+
+        }
+
+
+        @keyframes pendulum-action {
+            from {
+                transform: rotate(-15deg);
+            }
+            50% {
+                transform: rotate(15deg);
+            }
+            to {
+                transform: rotate(-15deg);
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<h1>Clockwerk</h1>
+
+
+<div class="pendulum">
+    <div class="line"></div>
+    <div class="weight"></div>
+</div>
+
+</body>
+</html>
